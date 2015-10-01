@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var chosenTool: Int = 0
+    var chosenColor:UIColor = UIColor.blackColor()
     
     @IBOutlet weak var controlPanelView: UIView!
     
@@ -28,12 +29,36 @@ class ViewController: UIViewController {
     @IBAction func chooseTool(button: UIButton) {
         chosenTool = button.tag
         
+        
+    }
+    
+    @IBAction func chosenColor(button:UIButton) {
+        chosenColor = button.backgroundColor! ?? UIColor.blackColor()
+        
+    }
+    
+    @IBAction func undo(sender: AnyObject) {
+        if (view as? DrawView)?.lines.count > 0 {
+            (view as? DrawView)?.lines.removeLast()
+            view.setNeedsDisplay()
+            
+        }
+        
+    }
+    
+    @IBAction func clear(sender: AnyObject) {
+        if (view as? DrawView)?.lines.count > 0 {
+            (view as? DrawView)?.lines = []
+            view.setNeedsDisplay()
+            
+        }
+        
     }
     
     func startShape(type:ShapeType, withTouch touch: UITouch) {
-        let shape = Shape(type: .Circle)
+        let shape = Shape(type: type)
         shape.start = touch.locationInView(view)
-        shape.fillColor = UIColor.blackColor()
+        shape.fillColor = chosenColor
         
         (view as? DrawView)?.lines.append(shape)
         
@@ -55,7 +80,7 @@ class ViewController: UIViewController {
                 case 1:
                     let newScribble = Scribble()
                     newScribble.points.append(touch.locationInView(view))
-                    newScribble.strokeColor = UIColor.blackColor()
+                    newScribble.strokeColor = chosenColor
                     newScribble.strokeWidth = 10
                     
                     (view as? DrawView)?.lines.append(newScribble)
@@ -75,7 +100,7 @@ class ViewController: UIViewController {
                 default:
                     let newLine = Line()
                     newLine.start = touch.locationInView(view)
-                    newLine.strokeColor = UIColor.blackColor()
+                    newLine.strokeColor = chosenColor
                     newLine.strokeWidth = 10
                     
                     (view as? DrawView)?.lines.append(newLine)
