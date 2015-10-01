@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BC168761BBD7DA7008D0FFC /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC168751BBD7DA7008D0FFC /* ToggleButton.swift */; settings = {ASSET_TAGS = (); }; };
+		2BC5260D1BBC18E7003700FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5260C1BBC18E7003700FD /* AppDelegate.swift */; };
+		2BC5260F1BBC18E7003700FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5260E1BBC18E7003700FD /* ViewController.swift */; };
+		2BC526121BBC18E7003700FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC526101BBC18E7003700FD /* Main.storyboard */; };
+		2BC526141BBC18E7003700FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC526131BBC18E7003700FD /* Assets.xcassets */; };
+		2BC526171BBC18E7003700FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC526151BBC18E7003700FD /* LaunchScreen.storyboard */; };
+		2BC5261F1BBC199F003700FD /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5261E1BBC199F003700FD /* DrawView.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2BC168751BBD7DA7008D0FFC /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		2BC526091BBC18E6003700FD /* TouchDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC5260C1BBC18E7003700FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BC5260E1BBC18E7003700FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2BC526111BBC18E7003700FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BC526131BBC18E7003700FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BC526161BBC18E7003700FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BC526181BBC18E7003700FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC5261E1BBC199F003700FD /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BC526061BBC18E6003700FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BC526001BBC18E6003700FD = {
+			isa = PBXGroup;
+			children = (
+				2BC5260B1BBC18E6003700FD /* TouchDraw */,
+				2BC5260A1BBC18E6003700FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BC5260A1BBC18E6003700FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BC526091BBC18E6003700FD /* TouchDraw.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BC5260B1BBC18E6003700FD /* TouchDraw */ = {
+			isa = PBXGroup;
+			children = (
+				2BC5260C1BBC18E7003700FD /* AppDelegate.swift */,
+				2BC5261E1BBC199F003700FD /* DrawView.swift */,
+				2BC5260E1BBC18E7003700FD /* ViewController.swift */,
+				2BC526101BBC18E7003700FD /* Main.storyboard */,
+				2BC168751BBD7DA7008D0FFC /* ToggleButton.swift */,
+				2BC526131BBC18E7003700FD /* Assets.xcassets */,
+				2BC526151BBC18E7003700FD /* LaunchScreen.storyboard */,
+				2BC526181BBC18E7003700FD /* Info.plist */,
+			);
+			path = TouchDraw;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BC526081BBC18E6003700FD /* TouchDraw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC5261B1BBC18E7003700FD /* Build configuration list for PBXNativeTarget "TouchDraw" */;
+			buildPhases = (
+				2BC526051BBC18E6003700FD /* Sources */,
+				2BC526061BBC18E6003700FD /* Frameworks */,
+				2BC526071BBC18E6003700FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TouchDraw;
+			productName = TouchDraw;
+			productReference = 2BC526091BBC18E6003700FD /* TouchDraw.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BC526011BBC18E6003700FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Joe E.";
+				TargetAttributes = {
+					2BC526081BBC18E6003700FD = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 2BC526041BBC18E6003700FD /* Build configuration list for PBXProject "TouchDraw" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BC526001BBC18E6003700FD;
+			productRefGroup = 2BC5260A1BBC18E6003700FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BC526081BBC18E6003700FD /* TouchDraw */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BC526071BBC18E6003700FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC526171BBC18E7003700FD /* LaunchScreen.storyboard in Resources */,
+				2BC526141BBC18E7003700FD /* Assets.xcassets in Resources */,
+				2BC526121BBC18E7003700FD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BC526051BBC18E6003700FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC5260F1BBC18E7003700FD /* ViewController.swift in Sources */,
+				2BC5260D1BBC18E7003700FD /* AppDelegate.swift in Sources */,
+				2BC5261F1BBC199F003700FD /* DrawView.swift in Sources */,
+				2BC168761BBD7DA7008D0FFC /* ToggleButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2BC526101BBC18E7003700FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BC526111BBC18E7003700FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BC526151BBC18E7003700FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BC526161BBC18E7003700FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BC526191BBC18E7003700FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BC5261A1BBC18E7003700FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BC5261C1BBC18E7003700FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TouchDraw/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Montchat.TouchDraw;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2BC5261D1BBC18E7003700FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TouchDraw/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Montchat.TouchDraw;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BC526041BBC18E6003700FD /* Build configuration list for PBXProject "TouchDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC526191BBC18E7003700FD /* Debug */,
+				2BC5261A1BBC18E7003700FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC5261B1BBC18E7003700FD /* Build configuration list for PBXNativeTarget "TouchDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC5261C1BBC18E7003700FD /* Debug */,
+				2BC5261D1BBC18E7003700FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BC526011BBC18E6003700FD /* Project object */;
+}

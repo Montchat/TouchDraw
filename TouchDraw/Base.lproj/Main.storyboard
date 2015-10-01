@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TouchDraw" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="DrawView" customModule="TouchDraw" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8OE-ZO-TQI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2h9-gG-0iN">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZIe-2C-7yl">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8OE-ZO-TQI" secondAttribute="height" multiplier="8:5" id="Ajt-Td-lJh"/>
+                                    <constraint firstAttribute="bottom" secondItem="2h9-gG-0iN" secondAttribute="bottom" id="DeV-pX-kk2"/>
+                                    <constraint firstItem="2h9-gG-0iN" firstAttribute="top" secondItem="8OE-ZO-TQI" secondAttribute="top" id="QPa-JG-igh"/>
+                                    <constraint firstItem="2h9-gG-0iN" firstAttribute="leading" secondItem="8OE-ZO-TQI" secondAttribute="leading" id="hX6-Qc-03u"/>
+                                    <constraint firstAttribute="trailing" secondItem="2h9-gG-0iN" secondAttribute="trailing" id="p7F-eo-K7p"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UA1-lZ-rHQ" customClass="ToggleButton" customModule="TouchDraw" customModuleProvider="target">
+                                <rect key="frame" x="260" y="200" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="FAh-Gt-BHG"/>
+                                    <constraint firstAttribute="height" constant="60" id="wxv-iH-zEk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="1.25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="circleInset">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="toggleControlPanel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PsG-ur-gXW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8OE-ZO-TQI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aqG-6a-V9X"/>
+                            <constraint firstItem="8OE-ZO-TQI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ceQ-5M-rcq"/>
+                            <constraint firstAttribute="trailing" secondItem="UA1-lZ-rHQ" secondAttribute="trailing" id="g7K-j2-p5L"/>
+                            <constraint firstAttribute="trailing" secondItem="8OE-ZO-TQI" secondAttribute="trailing" id="lBO-zi-2DG"/>
+                            <constraint firstItem="UA1-lZ-rHQ" firstAttribute="top" secondItem="8OE-ZO-TQI" secondAttribute="bottom" id="uoE-sL-FNZ"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="controlPanelTop" destination="aqG-6a-V9X" id="dCZ-h7-JGH"/>
+                        <outlet property="controlPanelView" destination="8OE-ZO-TQI" id="WEJ-zh-Vop"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="560" y="452"/>
+        </scene>
+    </scenes>
+</document>
