@@ -93,6 +93,26 @@ class DrawView: UIView {
                         case .Rectangle:
                             CGContextFillRect(context, rect)
                             
+                        case .Diamond:
+
+                            let top = CGPoint(x: width / 2 + start.x , y: start.y)
+                            let right = end
+                            let left = CGPoint(x: start.x, y: end.y)
+                            
+//                            let midX = CGRectGetMidX(rect)
+//                            let midY = CGRectGetMidY(rect)
+//
+//
+//                            print(top)
+//                            print(right)
+//                            print(left)
+                            
+                            CGContextMoveToPoint(context, top.x, top.y)
+                            CGContextAddLineToPoint(context, right.x, right.y)
+//                            CGContextAddLineToPoint(context, bottom.x, bottom.y)
+
+                            CGContextFillPath(context)
+                            
                         }
                         
                     }
@@ -171,7 +191,7 @@ class Scribble: Line {
 }
 
 enum ShapeType {
-    case Rectangle, Circle, Triangle
+    case Rectangle, Circle, Triangle, Diamond
     
 }
 
