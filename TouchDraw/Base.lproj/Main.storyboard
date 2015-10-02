@@ -110,6 +110,10 @@
                                                         <action selector="chosenColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rhL-K2-aRH"/>
                                                     </connections>
                                                 </button>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qjz-Wr-gSg" customClass="TouchSlider" customModule="TouchDraw" customModuleProvider="target">
+                                                    <rect key="frame" x="14" y="56" width="293" height="36"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <blurEffect style="light"/>
@@ -157,6 +161,7 @@
                     <connections>
                         <outlet property="controlPanelTop" destination="aqG-6a-V9X" id="dCZ-h7-JGH"/>
                         <outlet property="controlPanelView" destination="8OE-ZO-TQI" id="WEJ-zh-Vop"/>
+                        <outlet property="toggleButton" destination="UA1-lZ-rHQ" id="6pC-Mr-gjM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

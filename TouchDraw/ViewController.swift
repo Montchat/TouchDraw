@@ -16,12 +16,23 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var controlPanelTop: NSLayoutConstraint!
     
+    @IBOutlet weak var toggleButton: ToggleButton!
+    
     @IBAction func toggleControlPanel(sender: AnyObject) {
-        self.controlPanelTop.constant = self.controlPanelView.frame.origin.y == 0 ? -300: 0
+        self.controlPanelTop.constant = self.controlPanelView.frame.origin.y == 0 ? -200: 0
+        
+        let degrees:CGFloat = controlPanelView.frame.origin.y == 0 ? 0 : 180
+        
         view.setNeedsUpdateConstraints()
         UIView.animateWithDuration(1) { () -> Void in
             self.view.layoutIfNeeded()
             
+            let degreesToRadians: (CGFloat) -> CGFloat = {
+                return $0 / 180.0 * CGFloat(M_PI)
+            }
+            
+            let t = CGAffineTransformMakeRotation(degreesToRadians(degrees))
+            self.toggleButton.transform = t
         }
         
     }
@@ -52,7 +63,7 @@ class ViewController: UIViewController {
             view.setNeedsDisplay()
             
         }
-        
+    
     }
     
     func startShape(type:ShapeType, withTouch touch: UITouch) {
@@ -67,6 +78,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.controlPanelTop.constant = -200
 
     }
 
@@ -106,7 +118,9 @@ class ViewController: UIViewController {
                     (view as? DrawView)?.lines.append(newLine)
                     
                 }
+            
         }
+        
     }
 
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
