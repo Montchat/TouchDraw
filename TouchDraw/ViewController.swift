@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate {
     var chosenTool: Int = 0
     var chosenColor:UIColor = UIColor.blackColor()
+    
+    @IBOutlet weak var colorPallete: UICollectionView!
     
     @IBOutlet weak var controlPanelView: UIView!
     
@@ -43,9 +45,9 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func chosenColor(button:UIButton) {
-        chosenColor = button.backgroundColor! ?? UIColor.blackColor()
-        
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let cell = collectionView.cellForItemAtIndexPath(indexPath)
+        chosenColor = cell?.backgroundColor ?? UIColor.blackColor()
     }
     
     @IBAction func undo(sender: AnyObject) {
@@ -75,10 +77,20 @@ class ViewController: UIViewController {
         
     }
     
+    let colorSource = Colors()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(colorPallete)
+        
         self.controlPanelTop.constant = -200
+        colorPallete.delegate = self
+        colorPallete.dataSource = Colors()
+        
+        print(colorPallete.dataSource)
+        colorPallete.dataSource = colorSource 
+        colorPallete.reloadData()
 
     }
 
@@ -141,6 +153,43 @@ class ViewController: UIViewController {
         
     }
     
+}
+
+class Colors: NSObject, UICollectionViewDataSource {
+    
+    let fillColors = [
+        UIColor.redColor(),
+        UIColor.blackColor(),
+        UIColor.cyanColor(),
+        UIColor.orangeColor(),
+    
+    ]
+    
+    let strokeColors = [
+        UIColor.magentaColor(),
+        UIColor.blueColor(),
+        UIColor.yellowColor(),
+        UIColor.greenColor()
+    
+    ]
+    
+    var isFill = true
+
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return isFill ? fillColors.count : strokeColors.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ColorCell", forIndexPath: indexPath)
+        
+        cell.backgroundColor = isFill ? fillColors[indexPath.item] :strokeColors[indexPath.item]
+        
+        return cell
+        
+    }
+
 }
 
 

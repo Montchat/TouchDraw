@@ -76,7 +76,6 @@ class TouchSlider: UIView {
             
         }
         
-        
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
