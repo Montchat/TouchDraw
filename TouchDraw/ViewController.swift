@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate {
     var chosenTool: Int = 0
-    var chosenColor:UIColor = UIColor.blackColor()
+    var chosenColor:UIColor = UIColor.clearColor()
     
     @IBOutlet weak var colorPallete: UICollectionView!
     
