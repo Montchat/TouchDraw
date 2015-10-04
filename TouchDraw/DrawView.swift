@@ -9,7 +9,6 @@
 import UIKit
 
 class DrawView: UIView {
-    
     var lines = [Line]()
     override func drawRect(rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()

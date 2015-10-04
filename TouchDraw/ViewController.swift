@@ -22,10 +22,10 @@ class ViewController: UIViewController, UICollectionViewDelegate {
     
     @IBAction func toggleControlPanel(sender: AnyObject) {
         self.controlPanelTop.constant = self.controlPanelView.frame.origin.y == 0 ? -200: 0
-        
         let degrees:CGFloat = controlPanelView.frame.origin.y == 0 ? 0 : 180
         
         view.setNeedsUpdateConstraints()
+        
         UIView.animateWithDuration(1) { () -> Void in
             self.view.layoutIfNeeded()
             
@@ -47,7 +47,7 @@ class ViewController: UIViewController, UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let cell = collectionView.cellForItemAtIndexPath(indexPath)
-        chosenColor = cell?.backgroundColor ?? UIColor.blackColor()
+        chosenColor = cell?.backgroundColor ?? UIColor.clearColor()
     }
     
     @IBAction func undo(sender: AnyObject) {
@@ -82,7 +82,7 @@ class ViewController: UIViewController, UICollectionViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(colorPallete)
+        colorPallete.backgroundColor = UIColor.clearColor()
         
         self.controlPanelTop.constant = -200
         colorPallete.delegate = self
@@ -159,7 +159,7 @@ class Colors: NSObject, UICollectionViewDataSource {
     
     let fillColors = [
         UIColor.redColor(),
-        UIColor.blackColor(),
+        UIColor.greenColor(),
         UIColor.cyanColor(),
         UIColor.orangeColor(),
     
@@ -176,15 +176,12 @@ class Colors: NSObject, UICollectionViewDataSource {
     var isFill = true
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return isFill ? fillColors.count : strokeColors.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ColorCell", forIndexPath: indexPath)
-        
-        cell.backgroundColor = isFill ? fillColors[indexPath.item] :strokeColors[indexPath.item]
+        cell.backgroundColor = isFill ? fillColors[indexPath.item] : strokeColors[indexPath.item]
         
         return cell
         
